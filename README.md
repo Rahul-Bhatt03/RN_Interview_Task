@@ -1,50 +1,162 @@
-# Welcome to your Expo app 👋
+# 📱 React Native Quiz App (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple mobile **Quiz App** built using **React Native with Expo** and **React Navigation**.
+This app allows users to answer multiple-choice questions, get instant feedback, and view their final score.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+### 🏠 Home Screen
 
-2. Start the app
+* Displays app title
+* “Start Quiz” button to begin
 
-   ```bash
-   npx expo start
-   ```
+### ❓ Quiz Screen
 
-In the output, you'll find options to open the app in a
+* Shows one question at a time
+* 3–4 multiple-choice options
+* Instant feedback: **Correct / Wrong**
+* Automatically moves to next question
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 📊 Result Screen
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+* Displays final score (e.g., `3/5`)
+* Button to restart quiz
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🧠 Quiz Logic
+
+* Questions stored in a **JSON file**
+* Tracks:
+
+  * Current question index
+  * User score
+* Navigation handled using **React Navigation**
+
+---
+
+## ⚙️ Tech Stack
+
+* React Native (Expo)
+* React Hooks (`useState`, `useEffect`)
+* React Navigation (Stack Navigator)
+
+---
+
+## ⭐ Bonus Features (Optional)
+
+* Progress bar showing quiz progress
+* Randomly shuffled options
+
+---
+
+# 📦 Getting Started
+
+## 🔽 1. Clone the Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-username/quiz-app.git
+cd quiz-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📥 2. Install Dependencies
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## ▶️ 3. Start the Expo Server
 
-Join our community of developers creating universal apps.
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 📱 4. Run on Your Phone (Expo Go)
+
+### Step-by-step:
+
+1. Install **Expo Go** on your phone:
+
+   * Android: Play Store
+   * iOS: App Store
+
+2. Make sure:
+
+   * Your phone and computer are on the **same WiFi network**
+
+3. Run the app:
+
+   * Scan the QR code shown in terminal or browser
+   * OR manually enter the URL in Expo Go
+
+---
+
+## 📁 Project Structure
+
+```
+quiz-app/
+├── src/
+│   ├── screens/
+│   │   ├── HomeScreen.tsx
+│   │   ├── QuizScreen.tsx
+│   │   └── ResultScreen.tsx
+│   ├── components/
+│   │   └── OptionButton.tsx
+│   ├── utils/
+│   │   └── question.json
+├── App.tsx
+├── package.json
+```
+
+---
+
+## 🔄 Navigation Flow
+
+```
+Home → Quiz → Result → Restart → Home
+```
+
+---
+
+## 📝 Example Question Format (JSON)
+
+```json
+{
+  "questions": [
+    {
+      "question": "What is React Native?",
+      "options": ["Library", "Framework", "Language", "Tool"],
+      "answer": "Framework"
+    }
+  ]
+}
+```
+
+---
+
+## 💡 Future Improvements
+
+* Add timer for each question
+* Add category-based quizzes
+* Store high scores
+* Add animations
+
+---
+
+## 🙌 Author
+
+Developed as part of a learning project / interview task.
+
+---
+
+## 📜 License
+
+This project is open-source and free to use.
